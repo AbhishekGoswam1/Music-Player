@@ -13,6 +13,7 @@ body{
 
 i{
     font-size: 1.2rem;
+    cursor: pointer;
 }
 
 a{
@@ -28,7 +29,7 @@ a{
 .top{
     width: 100%;
     height: 85%;
-    padding: 40px 30px 20px 30px;
+    padding: 30px 40px;
     background-color: #111111;
     border-radius: 0 0 50px 50px;
     display: flex;
@@ -109,7 +110,7 @@ a{
 }
 
 .searchDiv{
-    width: 80%;
+    width: 90%;
     padding: 0 10px;
     display: flex;
     align-items: center;
@@ -129,6 +130,129 @@ a{
     font-size: 1.1rem;
     border-radius: 20px;
 }
+
+/* middle top section */
+.middle-top, .middle-bottom{
+    width: 100%;
+    /* height: 30%; */
+    display: flex;
+    padding: 0px 40px;
+    flex-direction: column;
+}
+
+.middle-bottom{
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-width: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+}
+
+.middle-bottom::-webkit-scrollbar {
+    display: none;
+}
+
+.middle-top h4, .middle-bottom h4{
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+.middle-top h4{
+    margin-bottom: 20px;
+}
+
+.artist-box{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2.2rem;
+}
+
+.artists{
+    width: 7rem;
+    height: 7rem;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+
+}
+
+.artists h4{
+    width: 100%;
+    position: absolute;
+    bottom: -10%;
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.artists img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Song section (to charts)*/
+.song-box{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.song-div{
+    width: 100%;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    border-radius: 10px;
+    background-color: #333333;
+    cursor: pointer;
+}
+
+/* .song-div p{
+    width: 5%;
+    font-size: 1rem;
+    font-weight: 400;
+} */
+
+.song-div .song{
+    width: 45%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.song-img{
+    width: 2.5rem;
+    height: 2.5rem;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.song-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.song-div h4{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.song-desc{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 
 /* Top right section */
 .right{
@@ -154,8 +278,116 @@ a{
     cursor: pointer;
 }
 
+.right-bottom{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-right: 20px;
+}
 
+.right-bottom h3{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
 
+/* album section */
+.album-div{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #252525;
+}
+
+.album-info{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #383838;
+    border-radius: 10px;
+    gap: 20px;
+}
+
+.imgdiv{
+    width: 6rem;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.imgdiv img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.album-name{
+    height: 100%;
+    width: calc(100% - 6rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.album-name h3{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.album-name h4{
+    font-size: 0.9rem;
+    color: #888888;
+    font-weight: 500;
+}
+
+.fav-album{
+    display: flex;
+    gap: 15px;
+}
+
+.album{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.song-list{
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    padding: 10px 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.song-list li div{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #444444;
+}
+
+.song-list li div h4{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.duration{
+    font-size: 0.9rem;
+    font-weight: 400;
+}
 
 /* bottom section */
 .bottom{
@@ -201,8 +433,8 @@ a{
 }
 
 .songInfo img{
-    width: 50px;
-    height: 50px;
+    width: 4rem;
+    height: 4rem;
     border-radius: 10px;
     object-fit: cover;
 }
@@ -235,12 +467,6 @@ a{
     border-radius: 5px;
     display: block;
 }
-
-.progress h5{
-    font-size: 0.9rem;
-    font-weight: 400;
-}
-
 
 /* Bottom right section */
 .volume{
