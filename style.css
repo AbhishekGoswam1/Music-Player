@@ -3,12 +3,21 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 16px;
-    color: #939393;
+    color: #c0c0c0;
 }
 
 body{
     font-family: 'Montserrat', sans-serif;
     background-color: #252525;
+}
+
+i{
+    font-size: 1.2rem;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
 }
 
 .main{
@@ -19,9 +28,21 @@ body{
 .top{
     width: 100%;
     height: 85%;
-    padding: 20px 30px;
+    padding: 40px 30px 20px 30px;
     background-color: #111111;
     border-radius: 0 0 50px 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Top Left section */
+.left{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-right: 1px solid #444444;
 }
 
 .name h1{
@@ -30,13 +51,113 @@ body{
     color: #e13600;
 }
 
-.navlinks h3{
-    color: #939393;
+/* Nav container */
+.nav{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* gap: 5px; */
+}
+
+.navlinks, .libraryInnerdiv div, .playlistInnerdiv div{
+    width: 80%;
+    cursor: pointer;
+    display: flex;
+    gap: 15px;
+    padding: 6px 20px 6px 20px;
+    border-radius: 10px;
+}
+
+.navlinks:hover, .libraryInnerdiv div:hover, .playlistInnerdiv div:hover{
+    background-color: #e13600;
+}
+
+.navlinks h3, .libraryInnerdiv h4, .playlistInnerdiv h4{
     font-weight: 400;
+    font-size: 1rem;
+}
+
+.library h3, .playlist h3{
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.libraryInnerdiv, .playlistInnerdiv{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+    /* padding-left: 20px; */
+}
+
+.libraryInnerdiv div, .playlistInnerdiv div{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+}
+
+/*Top Middle section*/
+.middle{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    gap: 20px;
+    align-items: center;
+}
+
+.searchDiv{
+    width: 80%;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    background-color: #333333;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.searchDiv input{
+    width: 100%;
+    height: 38px;
+    padding: 5px 10px;
+    background-color: #333333;
+    border: none;
+    outline: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    border-radius: 20px;
+}
+
+/* Top right section */
+.right{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px;
+    align-items: center;
+}
+
+.right-top{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+.right-top i{
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 
-/* bottom css */
+
+
+/* bottom section */
 .bottom{
     width: 100%;
     height: 15%;
@@ -46,6 +167,100 @@ body{
     align-items: center;
 }
 
+/* bottom left section */
 .controls{
+    width: 15%;
     display: flex;
+    justify-content: center;
+}
+
+.controls i{
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 7px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.controls i:hover{
+    background-color: #e13600;
+}
+
+/* Bottom middle section */
+.songDetails{
+    max-width: 65%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.songInfo, .progress{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.songInfo img{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.namecontainer h4{
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.namecontainer h6{
+    font-size: 1rem;
+    color: #888888;
+    font-weight: 400;
+}
+
+/* Progress section */
+.progressBar{
+    /* min-width: 15rem; */
+    width: 30vw;
+    height: 4px;
+    background-color: #444444;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.progressBar span{
+    width: 60%;
+    height: 100%;
+    background-color: #e13600;
+    border-radius: 5px;
+    display: block;
+}
+
+.progress h5{
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+
+/* Bottom right section */
+.volume{
+    width: 20%;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.volume i{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.volume input[type="range"]{
+    height: 5px;
+    background-color: #444444;
+    border-radius: 5px;
+    outline: none;
+    accent-color: #e13600;
+    cursor: pointer;
 }
