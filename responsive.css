@@ -15,6 +15,7 @@ img {
 /* Hides overflow on mobile */
 body {
     overflow-x: hidden;
+    width: fit-content;
 }
 
 /* ----------------------- MENU TOGGLE ----------------------- */
@@ -42,6 +43,7 @@ body {
 @media (max-width: 768px) {
     /* Adjust top layout */
     .top {
+        /* width: 100%; */
         flex-direction: column;
         height: auto;
         padding: 15px;
@@ -67,6 +69,11 @@ body {
 
     .left.active {
         left: 0;
+    }
+
+    .navlinks h3, .libraryInnerdiv h4, .playlistInnerdiv h4 {
+        font-weight: 400;
+        font-size: 1.5rem;
     }
 
     .search-container{
