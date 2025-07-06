@@ -7,6 +7,8 @@
 }
 
 body{
+    width: 100vw;
+    height: 100vh;
     font-family: 'Montserrat', sans-serif;
     background-color: #252525;
 }
@@ -46,6 +48,13 @@ a{
     border-right: 1px solid #444444;
 }
 
+.name{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .name h1{
     font-size: 2.5rem;
     font-weight: 800;
@@ -68,6 +77,7 @@ a{
     padding: 6px 20px 6px 20px;
     border-radius: 10px;
 }
+
 
 .navlinks:hover, .libraryInnerdiv div:hover, .playlistInnerdiv div:hover{
     background-color: #e13600;
@@ -109,21 +119,28 @@ a{
     align-items: center;
 }
 
+.search-container{
+    width: 95%;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
 .searchDiv{
-    width: 90%;
+    width: 100%;
     padding: 0 10px;
     display: flex;
     align-items: center;
-    background-color: #333333;
+    background-color: #252525;
     justify-content: center;
-    border-radius: 20px;
+    border-radius: 1.5rem;
 }
 
 .searchDiv input{
     width: 100%;
     height: 38px;
     padding: 5px 10px;
-    background-color: #333333;
+    background-color: transparent;
     border: none;
     outline: none;
     font-family: 'Montserrat', sans-serif;
@@ -211,7 +228,7 @@ a{
     align-items: center;
     padding: 0 20px;
     border-radius: 10px;
-    background-color: #333333;
+    background-color: #252525;
     cursor: pointer;
 }
 

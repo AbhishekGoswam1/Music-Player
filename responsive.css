@@ -1,0 +1,166 @@
+/* Responsive Styles for Buzz Music Player */
+
+/* General image scaling */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+/* Hides overflow on mobile */
+body {
+    overflow-x: hidden;
+}
+
+/* ----------------------- MENU TOGGLE ----------------------- */
+
+.menu-toggle {
+    display: none;
+    font-size: 2.2rem;
+    color: #e13600;
+    cursor: pointer;
+}
+
+/* Close button inside sidebar */
+.close-btn {
+    display: none;
+    cursor: pointer;
+}
+
+.close-btn i {
+    font-size: 2.2rem;
+    /* color: #e13600; */
+}
+
+
+/* ---------------------- MEDIA QUERIES ---------------------- */
+@media (max-width: 768px) {
+    /* Adjust top layout */
+    .top {
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+    }
+
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+    }
+
+    .left {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 70%;
+        background-color: #111111;
+        z-index: 1000;
+        transition: left 0.3s ease;
+        padding: 30px 20px 20px 20px;
+        overflow-y: auto;
+        border-right: 1px solid #444444;
+    }
+
+    .left.active {
+        left: 0;
+    }
+
+    .search-container{
+        width: 100%;
+        gap: 10px;
+        padding: 0;
+    }
+
+    .searchDiv{
+        border-radius: 2rem;
+    }
+
+    .close-btn {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+    }
+
+    .middle, .right {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .middle-top,
+    .middle-bottom {
+        padding: 0 10px;
+    }
+
+    .artist-box {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1.2rem;
+    }
+
+    .artists {
+        width: 5.5rem;
+        height: 5.5rem;
+    }
+
+    .album-info {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .imgdiv {
+        width: 4rem;
+    }
+
+    .album-name {
+        width: 100%;
+        align-items: center;
+    }
+
+    .main {
+        width: 100%;
+    }
+
+    .bottom {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .controls,
+    .volume {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .songDetails {
+        flex-direction: column;
+        gap: 10px;
+        max-width: 100%;
+        text-align: center;
+        align-items: center;
+    }
+
+    .progressBar {
+        width: 90vw;
+    }
+
+    .song-div .song {
+        width: 100%;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .song-desc {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px;
+    }
+}
